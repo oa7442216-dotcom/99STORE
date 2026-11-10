@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>99 STORE | متجر الملابس</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: #080d18;
+    color: white;
+}
+
+header {
+    background: #101827;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #087cff;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #168cff;
+}
+
+.logo span {
+    color: #ff253a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #168cff;
+}
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 7%;
+    background:
+    radial-gradient(circle at 80% 50%, #102e55, transparent 40%),
+    linear-gradient(120deg, #080d18, #101827);
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #168cff;
+}
+
+.hero p {
+    color: #b9c5d8;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #087cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #ff253a;
+    transform: translateY(-4px);
+}
+
+.car {
+    width: 430px;
+    max-width: 100%;
+    filter: drop-shadow(0 15px 30px #087cff66);
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 35px 5%;
+    background: #101827;
+}
+
+.feature {
+    color: #dce8f8;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    padding: 50px 10px 25px;
+    font-size: 32px;
+}
+
+.section-title span {
+    color: #168cff;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filters button {
+    background: #17243a;
+    border: 1px solid #168cff;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #087cff;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 10px 7% 60px;
+}
+
+.product {
+    background: #111d30;
+    border-radius: 13px;
+    overflow: hidden;
+    border: 1px solid #253c5d;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+    border-color: #168cff;
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: white;
+}
+
+.product-info {
+    padding: 17px;
+}
+
+.product h3 {
+    font-size: 19px;
+}
+
+.price {
+    color: #168cff;
+    font-size: 21px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.product button {
+    width: 100%;
+    padding: 11px;
+    background: #087cff;
+    color: white;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product button:hover {
+    background: #ff253a;
+}
+
+.promo {
+    text-align: center;
+    padding: 50px 15px;
+    background: linear-gradient(100deg, #092e59, #a20e2b);
+}
+
+.promo h2 {
+    font-size: 30px;
+}
+
+footer {
+    background: #050912;
+    text-align: center;
+    padding: 30px;
+    color: #aebbd0;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #20c768;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 200;
+}
+
+@media(max-width:700px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .car {
+        margin-top: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">99 <span>STORE</span></div>
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#contact">تواصل معنا</a>
+        <a href="#cart">السلة (<span id="cartCount">0</span>)</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>ستايلك يبدأ من <span>99 STORE</span></h1>
+        <p>اكتشف أحدث الملابس والأزياء العصرية. جودة مميزة وشكل مختلف يناسب ستايلك.</p>
+        <a href="#products" class="btn">تسوق الآن</a>
+    </div>
+
+    <svg class="car" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e8f3ff"/>
+                <stop offset=".45" stop-color="#46617e"/>
+                <stop offset="1" stop-color="#101827"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="300" cy="255" rx="250" ry="20" fill="#087cff" opacity=".35"/>
+        <path d="M70 205 L105 165 L180 145 L235 85 Q255 65 300 65 L410 65 Q445 70 475 120 L525 155 L555 205 L540 235 L65 235 Z"
+              fill="url(#body)" stroke="#168cff" stroke-width="4"/>
+        <path d="M190 145 L250 90 Q265 78 300 78 L390 78 Q420 80 445 135 Z"
+              fill="#091827" stroke="#168cff" stroke-width="3"/>
+        <path d="M300 80 L300 140" stroke="#168cff" stroke-width="3"/>
+        <path d="M75 200 L145 188 L175 205 L85 218 Z" fill="#168cff"/>
+        <path d="M470 190 L540 202 L535 220 L465 210 Z" fill="#ff253a"/>
+        <circle cx="175" cy="225" r="43" fill="#050912" stroke="#657c99" stroke-width="9"/>
+        <circle cx="175" cy="225" r="17" fill="#168cff"/>
+        <circle cx="440" cy="225" r="43" fill="#050912" stroke="#657c99" stroke-width="9"/>
+        <circle cx="440" cy="225" r="17" fill="#168cff"/>
+        <path d="M235 155 L400 155" stroke="#168cff" stroke-width="3"/>
+    </svg>
+</section>
+
+<div class="features">
+    <div class="feature">🚚 توصيل سريع</div>
+    <div class="feature">⭐ جودة مميزة</div>
+    <div class="feature">💳 أسعار مناسبة</div>
+    <div class="feature">🔥 أحدث الموديلات</div>
+</div>
+
+<h2 class="section-title" id="products">أحدث <span>المنتجات</span></h2>
+
+<div class="filters">
+    <button onclick="filterProducts('all')">الكل</button>
+    <button onclick="filterProducts('men')">رجالي</button>
+    <button onclick="filterProducts('women')">حريمي</button>
+    <button onclick="filterProducts('accessories')">إكسسوارات</button>
+</div>
+
+<section class="products">
+
+    <div class="product" data-category="men">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="تيشيرت رجالي">
+        <div class="product-info">
+            <h3>تيشيرت رجالي</h3>
+            <p class="price">250 جنيه</p>
+            <button onclick="addToCart('تيشيرت رجالي',250)">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product" data-category="men">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600" alt="بنطلون جينز">
+        <div class="product-info">
+            <h3>بنطلون جينز</h3>
+            <p class="price">450 جنيه</p>
+            <button onclick="addToCart('بنطلون جينز',450)">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product" data-category="women">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="ملابس حريمي">
+        <div class="product-info">
+            <h3>ستايل حريمي</h3>
+            <p class="price">550 جنيه</p>
+            <button onclick="addToCart('ستايل حريمي',550)">أضف للسلة</button>
+        </div>
+    </div>
+
+    <div class="product" data-category="accessories">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="ساعة">
+        <div class="product-info">
+            <h3>ساعة عصرية</h3>
+            <p class="price">350 جنيه</p>
+            <button onclick="addToCart('ساعة عصرية',350)">أضف للسلة</button>
+        </div>
+    </div>
+
+</section>
+
+<section class="promo">
+    <h2>99 STORE — خليك مختلف</h2>
+    <p>اختار ستايلك واطلب دلوقتي!</p>
+</section>
+
+<section id="cart" style="padding:35px 7%;text-align:center;">
+    <h2>سلة المشتريات</h2>
+    <div id="cartItems" style="margin:20px;"></div>
+    <h3 id="total">الإجمالي: 0 جنيه</h3>
+    <button class="btn" onclick="checkout()" style="border:0;cursor:pointer;margin-top:15px;">
+        اطلب عبر واتساب
+    </button>
+</section>
+
+<footer id="contact">
+    <h2>99 STORE</h2>
+    <p>متجر الملابس والأزياء العصرية</p>
+    <p>للطلب والاستفسار: 01104628421</p>
+    <p>جميع الحقوق محفوظة © 99 STORE</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/201104628421" target="_blank">
+    واتساب
+</a>
+
+<script>
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({name, price});
+    updateCart();
+    alert("تمت إضافة المنتج للسلة");
+}
+
+function updateCart() {
+    document.getElementById("cartCount").innerText = cart.length;
+
+    let items = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        items += `<p>${item.name} - ${item.price} جنيه
+        <button onclick="removeItem(${index})">حذف</button></p>`;
+        total += item.price;
+    });
+
+    document.getElementById("cartItems").innerHTML = items;
+    document.getElementById("total").innerText = "الإجمالي: " + total + " جنيه";
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function checkout() {
+    if(cart.length === 0) {
+        alert("السلة فارغة، أضف منتجات أولاً");
+        return;
+    }
+
+    let message = "مرحباً، أريد طلب المنتجات التالية:%0A";
+    let total = 0;
+
+    cart.forEach(item => {
+        message += "- " + item.name + " : " + item.price + " جنيه%0A";
+        total += item.price;
+    });
+
+    message += "الإجمالي: " + total + " جنيه";
+
+    window.open("https://wa.me/201104628421?text=" + encodeURIComponent(message), "_blank");
+}
+
+function filterProducts(category) {
+    document.querySelectorAll(".product").forEach(product => {
+        if(category === "all" || product.dataset.category === category) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
